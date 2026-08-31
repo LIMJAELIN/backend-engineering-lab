@@ -1,12 +1,14 @@
 # backend-engineering-lab
 
+[![CI](https://github.com/LIMJAELIN/backend-engineering-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/LIMJAELIN/backend-engineering-lab/actions/workflows/ci.yml)
+
 Hands-on backend engineering lab for Java, Spring, JPA, transactions, and concurrency.
 
 이 저장소는 production 경력을 가장하기 위한 예제 모음이 아니라, 현대 Java/Spring 백엔드의 핵심 동작을 **직접 재현하고 실행 가능한 테스트로 검증하기 위한 engineering lab**입니다.
 
 실무에서는 Java/Spring/MyBatis 기반 B2B ERP를 개발하고 있으며, 여기서는 persistence, transaction, concurrency 동작을 작은 실험으로 분리해 검증합니다.
 
-## Current experiments
+## Current verified experiments
 
 | Area | Experiment | Verification |
 | --- | --- | --- |
@@ -15,13 +17,15 @@ Hands-on backend engineering lab for Java, Spring, JPA, transactions, and concur
 | Concurrency | Optimistic Locking | stale transaction commit 실패 + 최종 수량/version assertion |
 | Transaction | REQUIRED / REQUIRES_NEW | outer rollback 이후 inner commit 보존 + exception propagation assertion |
 
+현재 CI는 PostgreSQL 18 환경에서 7개 테스트를 실행하며, `main` 최신 검증은 통과 상태를 유지합니다.
+
 각 실험은 `Problem → Reproduction → Observation → Decision → Verification → Trade-off` 구조로 문서화합니다.
 
 ## Tech Stack
 
 - Java 21
 - Spring Boot 4.0.8
-- Spring Data JPA / Hibernate
+- Spring Data JPA / Hibernate 7.2
 - PostgreSQL 18
 - JUnit 5 / AssertJ
 - GitHub Actions
