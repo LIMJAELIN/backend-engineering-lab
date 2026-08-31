@@ -4,9 +4,9 @@
 
 Hands-on backend engineering lab for Java, Spring, JPA, transactions, and concurrency.
 
-이 저장소는 production 경력을 가장하기 위한 예제 모음이 아니라, 현대 Java/Spring 백엔드의 핵심 동작을 **직접 재현하고 실행 가능한 테스트로 검증하기 위한 engineering lab**입니다.
+실무 Java/Spring/MyBatis 경험과 별도로, modern Java/Spring 백엔드의 핵심 동작을 **직접 재현하고 실행 가능한 테스트로 검증하기 위한 engineering lab**입니다.
 
-실무에서는 Java/Spring/MyBatis 기반 B2B ERP를 개발하고 있으며, 여기서는 persistence, transaction, concurrency 동작을 작은 실험으로 분리해 검증합니다.
+Persistence, transaction, concurrency behavior를 작은 실험으로 분리하고, 단순히 동작시키는 데서 끝내지 않고 원인·적용 조건·trade-off까지 설명할 수 있는 상태를 목표로 합니다.
 
 ## Current verified experiments
 
@@ -67,4 +67,4 @@ DB_PASSWORD
 
 ## Scope boundary
 
-이 저장소의 JPA/Hibernate 코드는 **학습 및 검증용 lab experience**입니다. 실제 production에서 JPA/Hibernate를 운영한 경력으로 표현하지 않습니다.
+JPA/Hibernate는 이 저장소에서 직접 구현·검증한 **hands-on lab experience**이며, production 운영 경험과는 구분합니다.
