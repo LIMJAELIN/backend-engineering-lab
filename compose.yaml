@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:18
+    environment:
+      POSTGRES_DB: jpalab
+      POSTGRES_USER: jpalab
+      POSTGRES_PASSWORD: jpalab
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jpalab -d jpalab"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
